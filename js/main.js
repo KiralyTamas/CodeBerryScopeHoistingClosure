@@ -25,7 +25,7 @@
 (function () {
     function isPositive(number) {
         var condition = "positive";
-        var fail = "Elbasztad";
+        var fail = "No!";
         var message;
         if (number > 0) {
             message = "Yes, it's " + condition;
