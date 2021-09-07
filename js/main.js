@@ -88,3 +88,21 @@ let absoluteUrl = (function () {
     return logAbsoluteUrl;
 })();
 absoluteUrl("index.html");
+
+/*Modul Pattern-be csomagolt köszönő fügvények kódja*/
+
+var greeting = (function () {
+    var hello = "Hello ";
+    var smile = " :)";
+    var excitement = " !!!";
+    return {
+        greetWithExcitement: function (name) {
+            console.log(hello + name + excitement);
+        },
+         greetWithASmile: function (name) {
+            console.log(hello + name + smile);
+        },
+    };
+})();
+greeting.greetWithExcitement("Earl");
+greeting.greetWithASmile("Peet");
