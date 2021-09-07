@@ -99,10 +99,53 @@ var greeting = (function () {
         greetWithExcitement: function (name) {
             console.log(hello + name + excitement);
         },
-         greetWithASmile: function (name) {
+        greetWithASmile: function (name) {
             console.log(hello + name + smile);
         },
     };
 })();
 greeting.greetWithExcitement("Earl");
 greeting.greetWithASmile("Peet");
+
+/*THIS funkció gyakorlása*/
+
+const person = {
+    name: "Berry",
+    hobbies: ["Discgolf", "Mantrailing"],
+    introduce: function () {
+        console.log("Hello, a nevem " + person.name);
+    },
+    isIntersetedIn: function (hobbi) {
+        if (this.hobbies.includes(hobbi)) { // Így tudjuk megnézni, hogy egy tömbben szerepel-e az a paraméter amit megadtunk a fügvénynek
+            console.log("Why yes, I love " + hobbi + ".")
+        } else {
+            console.log("Well, I have " + this.hobbies.length + " hobbies, but " + hobbi + " is not one of theme.")
+        }
+    }
+};
+person.introduce();
+person.isIntersetedIn("Longform Improv");
+person.isIntersetedIn("Discgolf");
+
+
+const personFactory = function (name) {
+    return {
+        name: name,
+        introduce: function () {
+            console.log("Hello, a nevem " + this.name);
+        },
+    };
+};
+personFactory("Berry").introduce();
+personFactory("Henry").introduce();
+personFactory("Lenina").introduce();
+
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function () {
+        return this._name;
+    }
+};
+var stoleSecretIdentity = hero.getSecretIdentity;
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
