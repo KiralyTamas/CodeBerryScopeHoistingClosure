@@ -1,3 +1,4 @@
+'use strict';
 /*Pozitív számok vizsgálatának kódja*/
 
 (function () {
@@ -149,3 +150,13 @@ var hero = {
 var stoleSecretIdentity = hero.getSecretIdentity;
 console.log(stoleSecretIdentity());
 console.log(hero.getSecretIdentity());
+
+/*This funkció eseménykezelőben*/
+var _button=(function () {
+const button=document.querySelector("js-button");
+function example(){
+alert("You Clicked!");
+}
+button.addEventListener("click",example);
+this.classList.add("is-info");
+})()
