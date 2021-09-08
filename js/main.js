@@ -154,6 +154,6 @@ console.log(hero.getSecretIdentity());
 /*This funkció eseménykezelőben*/
 const button = document.querySelector(".js-button");
 function toggleColor() {
-    this.classList.toggle("is-info");
-};
+    this.classList.add("is-info");
+}
 button.addEventListener("click", toggleColor);
