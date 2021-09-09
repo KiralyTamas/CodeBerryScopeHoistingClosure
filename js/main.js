@@ -152,10 +152,10 @@ console.log(stoleSecretIdentity());
 console.log(hero.getSecretIdentity());
 
 /*This funkció eseménykezelőben*/
-const buttonS={
-button : document.querySelector(".jsButton"),
-toggleColor:function() {
-    this.button.classList.toggle("buttonShadow")
-},
+
+function toggleColor() {
+     var button=document.querySelector(".jsButton");
+    button.classList.toggle("buttonShadow");
+    console.log("Ez megy!!!");
 }
-buttonS.button.addEventListener("click", toggleColor());
+button.addEventListener("click", toggleColor);
