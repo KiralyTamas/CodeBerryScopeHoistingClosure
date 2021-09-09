@@ -1,4 +1,3 @@
-'use strict';
 /*Pozitív számok vizsgálatának kódja*/
 
 (function () {
@@ -153,9 +152,13 @@ console.log(hero.getSecretIdentity());
 
 /*This funkció eseménykezelőben*/
 
-function toggleColor() {
-     var button=document.querySelector(".jsButton");
-    button.classList.toggle("buttonShadow");
-    console.log("Ez megy!!!");
+const btn = {
+    button: document.querySelector(".testButton"),
+    toggleColor: function () {
+        this.classList.toggle("buttonShadow");
+    },
+    active:function(){
+        this.button.addEventListener("click", this.toggleColor);
+    }
 }
-button.addEventListener("click", toggleColor);
+btn.active();

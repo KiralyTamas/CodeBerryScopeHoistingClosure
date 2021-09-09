@@ -7,4 +7,5 @@ button{
 }
 .buttonShadow{
     box-shadow: 5px 5px 5px 5px blueviolet;
+    background: blue;
 }
