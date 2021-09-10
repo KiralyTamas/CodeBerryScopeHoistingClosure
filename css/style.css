@@ -1,12 +1,23 @@
 body{
-    display: inline-block;
+    display: block;
     margin: 20px;
 }
 button{
+    display: block;
     width: 100px;
     height: 20px;
+    margin-top: 15px;
 }
 .buttonShadow{
     box-shadow: 5px 5px 5px 5px blueviolet;
     background: blue;
+}
+
+#info,#infoButtons,#content{
+    display: inline-block;
+}
+#content{
+    background: green;
+    width: max-content;
+    height: max-content;
 }

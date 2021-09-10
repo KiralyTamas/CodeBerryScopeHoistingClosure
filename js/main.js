@@ -157,7 +157,7 @@ const btn = {
     toggleColor: function () {
         this.classList.toggle("buttonShadow");
     },
-    active:function(){
+    active: function () {
         this.button.addEventListener("click", this.toggleColor);
     }
 }
@@ -165,11 +165,13 @@ btn.active();
 
 /* This funkció használata data-info közbne*/
 
-const buttons=document.querySelectorAll(".js-button");
-function example(){
-    alert("you clicked a button");
-}
-buttons.forEach(function(button){
-    button.addEventListener("click", example);
+const buttons = document.querySelectorAll(".button");
+const output = document.getElementById("content");
+function example() {
+    let data=this.dataset.info;
+    output.innerHTML=data;
+};
+buttons.forEach(function (buttons) {
+    buttons.addEventListener("click", example);
+    
 });
-console.log(this.dataset.info);
