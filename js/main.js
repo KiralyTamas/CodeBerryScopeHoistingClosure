@@ -162,3 +162,14 @@ const btn = {
     }
 }
 btn.active();
+
+/* This funkció használata data-info közbne*/
+
+const buttons=document.querySelectorAll(".js-button");
+function example(){
+    alert("you clicked a button");
+}
+buttons.forEach(function(button){
+    button.addEventListener("click", example);
+});
+console.log(this.dataset.info);
