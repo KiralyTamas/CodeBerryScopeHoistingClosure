@@ -174,8 +174,8 @@ const buttonInfo = {
         });
     },
     writeMessage: function (clickButtons) {
-        this.output.textContent = clickButtons.dataset.info;
         this.output.classList.toggle("content2");
+        this.output.textContent = clickButtons.dataset.info;
     }
 }
 buttonInfo.start();

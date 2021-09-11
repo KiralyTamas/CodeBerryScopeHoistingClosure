@@ -8,16 +8,22 @@ button{
     height: 20px;
     margin-top: 15px;
 }
+.testButton{
+    transition: 800ms;
+}
 .buttonShadow{
+    transition: 800ms;
     box-shadow: 5px 5px 5px 5px blueviolet;
-    background: blue;
 }
 
 #info,#infoButtons,.content{
     display: inline-block;
 }
+.content{
+    transition: 500ms;
+}
 .content2{
-    transition-duration: 500ms;
+    transition: 500ms;
     background: green;
     width: max-content;
     height: max-content;
