@@ -13,10 +13,11 @@ button{
     background: blue;
 }
 
-#info,#infoButtons,#content{
+#info,#infoButtons,.content{
     display: inline-block;
 }
-.content{
+.content2{
+    transition-duration: 500ms;
     background: green;
     width: max-content;
     height: max-content;

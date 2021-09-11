@@ -168,13 +168,14 @@ btn.active();
 const buttonInfo = {
     buttons: document.querySelectorAll(".button"),
     output: document.querySelector(".content"),
-    writeMessage: function (clickButtons) {
-        this.output.innerHTML = clickButtons.dataset.info;
-    },
     start: function () {
         this.buttons.forEach((button) => {
             button.addEventListener("click", () => this.writeMessage(button));
         });
+    },
+    writeMessage: function (clickButtons) {
+        this.output.textContent = clickButtons.dataset.info;
+        this.output.classList.toggle("content2");
     }
 }
 buttonInfo.start();
