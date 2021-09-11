@@ -165,13 +165,16 @@ btn.active();
 
 /* This funkció használata data-info közbne*/
 
-const buttons = document.querySelectorAll(".button");
-const output = document.getElementById("content");
-function example() {
-    let data=this.dataset.info;
-    output.innerHTML=data;
-};
-buttons.forEach(function (buttons) {
-    buttons.addEventListener("click", example);
-    
-});
+const buttonInfo = {
+    buttons: document.querySelectorAll(".button"),
+    output: document.querySelector(".content"),
+    writeMessage: function (clickButtons) {
+        this.output.innerHTML = clickButtons.dataset.info;
+    },
+    start: function () {
+        this.buttons.forEach((button) => {
+            button.addEventListener("click", () => this.writeMessage(button));
+        });
+    }
+}
+buttonInfo.start();

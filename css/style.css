@@ -16,7 +16,7 @@ button{
 #info,#infoButtons,#content{
     display: inline-block;
 }
-#content{
+.content{
     background: green;
     width: max-content;
     height: max-content;
