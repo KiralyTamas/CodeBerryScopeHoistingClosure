@@ -28,3 +28,9 @@ button{
     width: max-content;
     height: max-content;
 }
+.bemutatkozas{
+    display: block;
+    background: rgb(195, 195, 238);
+    width: max-content;
+    height: max-content;
+}

@@ -179,3 +179,14 @@ const buttonInfo = {
     }
 }
 buttonInfo.start();
+
+//A call() és apply() használata
+
+const mySelf = {
+    name: "Király Tamás",
+    hobby: "programozni."
+};
+function introduce() {
+    document.querySelector(".bemutatkozas").textContent = "Helló, az én nevem " + this.name + ", és a szabadidőmban nagyon szeretek " + this.hobby;
+};
+introduce.call(mySelf);
