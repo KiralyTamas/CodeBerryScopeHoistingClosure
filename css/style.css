@@ -28,6 +28,10 @@ button{
     width: max-content;
     height: max-content;
 }
+.introduce{
+    width: max-content;
+    height: max-content;
+}
 .bemutatkozas{
     display: block;
     background: rgb(195, 195, 238);

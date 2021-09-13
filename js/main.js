@@ -184,9 +184,11 @@ buttonInfo.start();
 
 const mySelf = {
     name: "Király Tamás",
-    hobby: "programozni."
+    hobby: "programozni.",
+    introduce:document.querySelector(".introduce"),
+    bemutatkozas:document.querySelector(".bemutatkozas")
 };
 function introduce() {
-    document.querySelector(".bemutatkozas").textContent = "Helló, az én nevem " + this.name + ", és a szabadidőmban nagyon szeretek " + this.hobby;
+    this.bemutatkozas.textContent = "Helló, az én nevem " + this.name + ", és a szabadidőmban nagyon szeretek " + this.hobby;
 };
-introduce.call(mySelf);
+mySelf.introduce.addEventListener("click", introduce.bind(mySelf));
