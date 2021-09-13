@@ -170,7 +170,7 @@ const buttonInfo = {
     output: document.querySelector(".content"),
     start: function () {
         this.buttons.forEach((button) => {
-            button.addEventListener("click", () => this.writeMessage(button));
+            button.addEventListener("click",()=> this.writeMessage(button));
         });
     },
     writeMessage: function (clickButtons) {
