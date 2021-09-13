@@ -189,6 +189,7 @@ const mySelf = {
     bemutatkozas:document.querySelector(".bemutatkozas")
 };
 function introduce() {
+    this.bemutatkozas.classList.toggle("bemutatkozas2");
     this.bemutatkozas.textContent = "Helló, az én nevem " + this.name + ", és a szabadidőmban nagyon szeretek " + this.hobby;
 };
 mySelf.introduce.addEventListener("click", introduce.bind(mySelf));
